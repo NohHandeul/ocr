@@ -11,3 +11,6 @@ class OcrApplicationTests {
     }
 
 }
+
+
+/*커밋 테스트를 위한 수정__*/
