@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>OCR Result</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(45deg, #f3ec78, #af4261);
+      height: 100vh;
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .card {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-primary {
+      background-color: #af4261;
+      border-color: #af4261;
+    }
+
+    .btn-secondary {
+      background-color: #f3ec78;
+      border-color: #f3ec78;
+      color: #333;
+    }
+
+    .btn-secondary:hover {
+      background-color: #f5ee90;
+      border-color: #f5ee90;
+      color: #333;
+    }
+
+    /* Here's the style for the <pre> tag */
+    .result-text {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="card">
+        <div class="card-header">OCR Result</div>
+        <div class="card-body">
+          <p>OCR Result:</p>
+          <!-- Here's the modified <pre> tag -->
+          <pre th:text="${ocrResult}" class="border p-2 bg-white result-text"></pre>
+          <a href="/" class="btn btn-secondary mt-3">Go Back</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

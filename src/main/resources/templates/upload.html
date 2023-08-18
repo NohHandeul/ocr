@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>OCR Upload</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(45deg, #f3ec78, #af4261);
+      height: 100vh;
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .card {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-primary {
+      background-color: #af4261;
+      border-color: #af4261;
+    }
+
+    .btn-secondary {
+      background-color: #f3ec78;
+      border-color: #f3ec78;
+      color: #333;
+    }
+
+    .btn-secondary:hover {
+      background-color: #f5ee90;
+      border-color: #f5ee90;
+      color: #333;
+    }
+  </style>
+
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card">
+        <div class="card-header">Upload Image for OCR</div>
+        <div class="card-body">
+          <form action="/doOcr" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+              <label>Select Image:</label>
+              <input type="file" name="file" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Upload & Process</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+
